@@ -75,13 +75,13 @@ body {
         border: 1px solid rgb(95, 0, 128);
         border-radius: 6px;
         display: flex;
-        width: 350px;
+        width: 450px;
         height: 48px;
         padding-left: 14px;
         .search-box {
           font-size: 14px;
           border: 0;
-          width: 300px;
+          width: 400px;
           &:focus {
             outline: none;
           }
@@ -126,7 +126,54 @@ body {
     }
   }
   .nav {
+    display: flex;
     height: 56px;
-    background-color: orange;
+    margin-top: 10px;
+    // background-color: orange;
+    .category {
+      display: flex;
+      align-items: center;
+      .cate-content {
+        &.cate-icon {
+          width: 16px;
+          height: 14px;
+          background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0wIDBoMTZ2MS43SDBWMHptMCA2LjE1aDE2djEuN0gwdi0xLjd6bTAgNi4xNWgxNlYxNEgwdi0xLjd6IiBmaWxsPSIjMzMzIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPC9zdmc+Cg==")
+            no-repeat;
+          margin-right: 14px;
+        }
+        &.cate-text {
+          font-weight: 800;
+        }
+      }
+    }
+    .tab {
+      display: flex;
+      margin-left: 200px;
+      align-items: center;
+      .tab-content {
+        width: 150px;
+        font-weight: 800;
+        &:hover {
+          color: var(--kurly-color);
+          cursor: pointer;
+        }
+      }
+    }
+    .guide {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      bottom: -53.5px;
+      font-size: 13px;
+      color: var(--dark-gray-color);
+      padding: 6px 16px;
+      border-radius: 18px;
+      border: 1px solid rgb(238, 238, 238);
+      .guide-style {
+        padding: 0;
+        color: var(--kurly-color);
+      }
+    }
   }
 }
