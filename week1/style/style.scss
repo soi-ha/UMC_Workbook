@@ -177,3 +177,170 @@ body {
     }
   }
 }
+.shadow {
+  height: 100px;
+  position: relative;
+  z-index: 999999;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+}
+
+// Main
+.main {
+  position: relative;
+  margin: 0 auto;
+  .banner {
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
+    .banner-img {
+      min-width: 1050px;
+      min-height: auto;
+      height: 370px;
+      img {
+        display: block;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .main-box {
+    min-height: auto;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 30px 0;
+    &.recommend {
+      padding: 100px 0;
+      .box-title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 27px;
+        font-size: var(--font-title);
+        font-weight: 800;
+      }
+      .box-content {
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 50px;
+        .product {
+          width: 249px;
+          margin-right: 18px;
+          .product-img {
+            height: 320px;
+          }
+          .product-info {
+            position: relative;
+            padding: 14px 10px 0px 0px;
+            .product-name {
+              line-height: 1.45;
+              margin-bottom: 8px;
+            }
+            .product-price {
+              font-weight: bold;
+              line-height: 1.5;
+            }
+            .product-review {
+              padding-top: 8px;
+              font-size: var(--font-small);
+              font-weight: 300;
+              display: flex;
+              .review-icon {
+                width: 15px;
+                height: 15px;
+                margin: 0px 2px 0px 0px;
+              }
+              .review-count {
+              }
+            }
+          }
+        }
+      }
+    }
+    &.notice {
+      img {
+        width: 100%;
+        height: 140px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    &.collection {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 50px;
+      .collection-top {
+        display: flex;
+        .collection-left {
+          margin-right: 36px;
+          .left-img {
+            height: 308px;
+          }
+        }
+        .collection-right {
+          letter-spacing: -0.2px;
+          .right-top {
+            display: block;
+            font-weight: 600;
+            font-size: var(--font-title);
+            line-height: 40px;
+          }
+          .right-bottom {
+            padding-top: 23px;
+            line-height: 26px;
+          }
+        }
+      }
+      .collection-bottom {
+        padding: 12px 0px 20px;
+        .bottom-list {
+          display: flex;
+          flex-wrap: wrap;
+          .list-item {
+            width: 525px;
+            display: flex;
+            padding-top: 24px;
+            margin: auto;
+            .item-img {
+              height: 92px;
+              margin-right: 20px;
+              max-width: 100%;
+            }
+            .item-content {
+              flex: 0 0 311px;
+              .content-name {
+                width: 295px;
+                padding-top: 9px;
+                line-height: 23px;
+              }
+              .content-price {
+                padding-top: 7px;
+                font-weight: bold;
+                line-height: 24px;
+              }
+            }
+            .item-button {
+              display: block;
+              width: 104px;
+              height: 36px;
+              margin-top: 18px;
+              padding: 0px 0px 1px 49px;
+              border: 1px solid rgb(221, 221, 221);
+              border-radius: 4px;
+              background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHN0cm9rZT0iIzMzMyIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxwYXRoIGQ9Ik0xLjUzNiAyLjdoMi4zOThsMS44MzUgNy45MDloNy44OGwxLjY1MS02LjI1SDQuODdNMTIuODU5IDE0LjkzM2ExLjEzNCAxLjEzNCAwIDEgMCAwLTIuMjY3IDEuMTM0IDEuMTM0IDAgMCAwIDAgMi4yNjd6TTYuNDk0IDE0LjkzM2ExLjEzNCAxLjEzNCAwIDEgMCAwLTIuMjY3IDEuMTM0IDEuMTM0IDAgMCAwIDAgMi4yNjd6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=)
+                29px 50% no-repeat;
+              text-align: left;
+              &::after {
+                content: "담기";
+                font-size: 13px;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

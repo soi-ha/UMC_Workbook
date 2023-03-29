@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --kurly-color: rgb(95, 0, 128);
   --gray-color: rgb(217, 217, 217);
@@ -164,6 +165,168 @@ body {
 .header .nav .guide .guide-style {
   padding: 0;
   color: var(--kurly-color);
+}
+
+.shadow {
+  height: 100px;
+  position: relative;
+  z-index: 999999;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+}
+.main .banner {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+.main .banner .banner-img {
+  min-width: 1050px;
+  min-height: auto;
+  height: 370px;
+}
+.main .banner .banner-img img {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.main .main-box {
+  min-height: auto;
+  width: 1050px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.main .main-box.recommend {
+  padding: 100px 0;
+}
+.main .main-box.recommend .box-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 27px;
+  font-size: var(--font-title);
+  font-weight: 800;
+}
+.main .main-box.recommend .box-content {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.main .main-box.recommend .box-content .product {
+  width: 249px;
+  margin-right: 18px;
+}
+.main .main-box.recommend .box-content .product .product-img {
+  height: 320px;
+}
+.main .main-box.recommend .box-content .product .product-info {
+  position: relative;
+  padding: 14px 10px 0px 0px;
+}
+.main .main-box.recommend .box-content .product .product-info .product-name {
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+.main .main-box.recommend .box-content .product .product-info .product-price {
+  font-weight: bold;
+  line-height: 1.5;
+}
+.main .main-box.recommend .box-content .product .product-info .product-review {
+  padding-top: 8px;
+  font-size: var(--font-small);
+  font-weight: 300;
+  display: flex;
+}
+.main .main-box.recommend .box-content .product .product-info .product-review .review-icon {
+  width: 15px;
+  height: 15px;
+  margin: 0px 2px 0px 0px;
+}
+.main .main-box.notice img {
+  width: 100%;
+  height: 140px;
+  margin: 0 auto;
+  display: block;
+}
+.main .main-box.collection {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+.main .main-box.collection .collection-top {
+  display: flex;
+}
+.main .main-box.collection .collection-top .collection-left {
+  margin-right: 36px;
+}
+.main .main-box.collection .collection-top .collection-left .left-img {
+  height: 308px;
+}
+.main .main-box.collection .collection-top .collection-right {
+  letter-spacing: -0.2px;
+}
+.main .main-box.collection .collection-top .collection-right .right-top {
+  display: block;
+  font-weight: 600;
+  font-size: var(--font-title);
+  line-height: 40px;
+}
+.main .main-box.collection .collection-top .collection-right .right-bottom {
+  padding-top: 23px;
+  line-height: 26px;
+}
+.main .main-box.collection .collection-bottom {
+  padding: 12px 0px 20px;
+}
+.main .main-box.collection .collection-bottom .bottom-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .main-box.collection .collection-bottom .bottom-list .list-item {
+  width: 525px;
+  display: flex;
+  padding-top: 24px;
+  margin: auto;
+}
+.main .main-box.collection .collection-bottom .bottom-list .list-item .item-img {
+  height: 92px;
+  margin-right: 20px;
+  max-width: 100%;
+}
+.main .main-box.collection .collection-bottom .bottom-list .list-item .item-content {
+  flex: 0 0 311px;
+}
+.main .main-box.collection .collection-bottom .bottom-list .list-item .item-content .content-name {
+  width: 295px;
+  padding-top: 9px;
+  line-height: 23px;
+}
+.main .main-box.collection .collection-bottom .bottom-list .list-item .item-content .content-price {
+  padding-top: 7px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.main .main-box.collection .collection-bottom .bottom-list .list-item .item-button {
+  display: block;
+  width: 104px;
+  height: 36px;
+  margin-top: 18px;
+  padding: 0px 0px 1px 49px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 4px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHN0cm9rZT0iIzMzMyIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxwYXRoIGQ9Ik0xLjUzNiAyLjdoMi4zOThsMS44MzUgNy45MDloNy44OGwxLjY1MS02LjI1SDQuODdNMTIuODU5IDE0LjkzM2ExLjEzNCAxLjEzNCAwIDEgMCAwLTIuMjY3IDEuMTM0IDEuMTM0IDAgMCAwIDAgMi4yNjd6TTYuNDk0IDE0LjkzM2ExLjEzNCAxLjEzNCAwIDEgMCAwLTIuMjY3IDEuMTM0IDEuMTM0IDAgMCAwIDAgMi4yNjd6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=) 29px 50% no-repeat;
+  text-align: left;
+}
+.main .main-box.collection .collection-bottom .bottom-list .list-item .item-button::after {
+  content: "담기";
+  font-size: 13px;
+  line-height: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
