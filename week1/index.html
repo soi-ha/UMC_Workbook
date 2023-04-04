@@ -1,391 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght&family=Noto+Sans:wght&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style/style.css" />
-    <title>컬리 - 마켓컬리/뷰티컬리</title>
-  </head>
-  <body>
-    <section class="header">
-      <div class="customer">
-        <span class="cus-content sign-up">회원가입</span>
-        <span class="cus-content sign-in">로그인</span>
-        <span class="cus-content support">고객센터</span>
-      </div>
-      <div class="title">
-        <div class="title-left">
-          <img
-            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA4MiA0MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0ibm9uZSI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg4MnY0MkgweiIvPgogICAgICAgIDxwYXRoIGQ9Ik02Mi41Ljk2NWMxLjAyNi0uNTU3IDIuNDY2LS43MTggMy4zNTYuMTA3Ljg5LjgyNS42NzYgMi4wNDggMCAzLjk3MyAwIDAtMS41MDUgNC4wNjYtMy4wNTUgOC4yNjJsLS4zOTggMS4wOGMtMS40MTQgMy44My0yLjc2MiA3LjQ4Ny0yLjkyNyA3Ljk2My0xLjQ5OCA0LjI0NSAxLjk2NyA0LjEyMiA0LjAyNC0uMTUyIDEuMTU5LTIuMzk0IDIuNjQ0LTYuMzU3IDIuNjQ0LTYuMzU3LjUyNC0xLjU2My42ODItMi41MDQuMzU5LTIuODI4LS4xMDctLjExMy4wNDUtLjI1Mi4xOC0uMzIzIDIuMjY5LTEuMTQ5IDQuNjMtLjA3MiAzLjMzNiAzLjMxbC0uMDU0LjEzOGMtLjM4Ny45NzgtMi42OCA2LjczMy0yLjY4IDYuNzMzLS42NzYgMS42Ni0uNTk1IDMuMjM2LjQxOCAzLjIzNi42ODYtLjAwNCAxLjQ2LS4zODUgMi4zMDQtMS4wODggMS44MTgtMS41MDQgMy4yMjItNC4zMTIgMy43MjctNS40NTQuMjMtLjUwOCAxLjA4Ny0yLjQyIDEuNzY2LTQuMzYxLjIzNi0uNjY1LjM2OS0xLjM2LjM5NS0yLjA2NWEuNDQzLjQ0MyAwIDAgMSAuMTk0LS40NTkgMy41NzggMy41NzggMCAwIDEgMS42Ny0uNDIgMS44MDUgMS44MDUgMCAwIDEgMS40NjUuNzA1Yy40NDMuNTk4LjU2NiAxLjU3OS4xMDMgMi44MDgtLjEyLjMyLTMuNzc1IDkuOTU4LTMuNzc1IDkuOTU4di4wMjZjMi4wNDEtMS4yMjMgMy44Ny0xLjMxMyA0Ljk1My0uODU0bC0uMDAzLS4wMTNjMS40OTUuNjQ3IDEuOTkgMi40NC45MzggMy41NTktLjEwMy4xMS0uMzYyLjA4NC0uMzYyLS4wOS0uMDk0LTEuMjUzLTIuNTE3LTMuNDk1LTYuMTA5LTEuMDc1bC0uMTQ1LjM4NS0xLjA2OCAyLjgwOGMtMi42MiA3LjAxOC01LjQwMyAxMi4xMzYtOS40MTUgMTEtMi42ODgtLjc2LTIuMzc3LTQuNjA3LjUxNS03Ljc5YTU0LjkgNTQuOSAwIDAgMSA2LjQ5LTUuODk4Yy4wNjgtLjE4OC4xMy0uMzUuMTg4LS41MTEuMjc4LS43OC40OTEtMS40MzQuNzkyLTIuMjY1bC4xNTktLjUxOGMtLjE3OC4yLS40OTguNTczLS43MTIuODEyLS43MTIuOC0yLjQ5NCAyLjc1Ny01LjMyOSAyLjIwN2wtLjIzNC0uMDUyYy0yLjA1LS41MDgtMi42MDgtMS45ODYtMi42NTUtMy4yNzctMi4xNDIgMi42NTYtNC4zNTEgMy40MjYtNS44MDcgMy4zOS0xLjk0OC0uMDQ4LTMuMzc4LTEuNTE0LTIuNDI3LTQuMjkgMS4wNTgtMy4xMDYgNS41LTE1LjMzMiA2Ljc5NS0xOSAuNDg1LTEuNTguNjY2LTIuNTguMTg0LTIuOTc0LS4xMjMtLjEwMy4wNTItLjI2NS4yLS4zNDZ6bTguMzY0IDI4Ljc3OGMtMS4xMDMuODgtNS41MjYgNC41My02Ljc1MiA3LjQ0MS0uNTA1IDEuMTk3LS4zNzYgMi4xNDkuNDg4IDIuMjMzIDEuOTYuMTk0IDQuMDEyLTMuODE4IDYuMjI4LTkuNTEyek0xNi4wMjggNS4zNTJjLS4wODcuMzMyLTEuMzE5IDMuODYtMi43MDEgNy43NDlsLS4yMDkuNTg2LS4yMS41ODktLjIxNS42MDRjNC42OTEtMS4xMjMgMTMuMDY0LTYuNTcgMTQuMDM1LTEwLjA4NS4xMi0uMTYxLjI5LS4yMi41NjYtLjAzNS40OTUuMzMuNjg2IDEuMTU1LjQ5NSAxLjkxOC0uNzY0IDMuMDM4LTYuNDE2IDcuMzQxLTExLjM3OSA5LjU1NC42MTIgMS42MzcgMi42ODIgNi4yNjcgNC4yMDYgOS4xMTEgMS42NjMgMy4xMTkgMy40MiA0LjU3NSA2LjE0NyA0LjczNyAxLjQ2LjA4NSAzLjAxNC0uNDQ3IDMuODkzLTEuMjJsLjE0OC0uMTQtLjAxMy4wM2MuMTk0LS4yMDQuNTExLjA3Ny4zNjYuMzIzYTYuNSA2LjUgMCAwIDEtNC45OTIgMi44NjdjLTYuMzQ1LjQyNy04Ljc3NC0zLjg3LTEzLjMwNC0xNC40OTQtLjM2Ni4xMjYtLjgwOS4yODgtMS4yNTUuNDUtLjA3NS4xODctMi4wNyA1LjY0Mi0yLjEzIDUuODIzLS45NDQgMi44Ny0xLjAwNSA0LjQ0Mi0uMzU4IDQuODk1LjE0NS4wOS4wNzQuMzMzLS4xNzguNDE0LTIuNTI3Ljc5Ni00Ljg1My0uNjk2LTMuNTU5LTQuNDQyIDEuMTYxLTMuMzE2IDUuNjktMTYuMTggNi45MTQtMTkuNjI2LjQyNy0xLjI5NC4xOTctMi4xMjUtLjQ5Mi0yLjMwNkM4LjUwNiAxLjc4Ljg3NyA4Ljc0OSAxLjk3MSAxNS4xODRjLjE5IDEuMTIuOTggMS43NDcgMS4zNzggMS42NjNhLjEzMy4xMzMgMCAwIDEgLjE1Ni4xNTkgMS41MDggMS41MDggMCAwIDEtMS44NDUgMS4wMzJDLjQ5IDE3Ljc4Mi4xMDcgMTYuNTI3LjA0MyAxNS44OC0uNjAxIDkuMjIgNi4xNDggMS4yMyAxMi4zODkuNThjMi4zNzgtLjI1IDQuNjEuOTYgMy42NCA0Ljc3MnptMjQuMDQgOS45MTMtLjA2LjIwNy0yLjgzIDguMTZjLS4zMDQuODUtLjEgMS43MzcuNTAxIDEuOTAyIDEuNzU3LjQ4MiA0LjAyOC0yLjE0NSA1LjEzMS00LjczM2E2Ny43OTQgNjcuNzk0IDAgMCAwIDEuNDc2LTMuODE1Yy41ODItMS42NDMgMS4xMDYtMy4xODMuNzgzLTMuOTA4LS4wNzUtLjE2OC4wNDUtLjI1Ni4yMjMtLjM1LjUwNS0uMjU1IDIuMjI2LS44MjUgMy4xNDEuMDY4LjY5NS42NzQuNjA5IDEuNzcxLS4wMyAzLjQzN2wtLjA5Ni4yNDIuMjItLjI3M2MyLjcwMy0zLjMgNC43OTItNC4yOTIgNi41NjMtMy41OTdsLjE0Ny4wNjJjMi4zODEgMS4wNzQgMS4xNDYgNS4yMTUtMi4xMTYgNS40OC0uMi4wMTctLjM1Ni0uMTI2LS4xNTgtLjQwNy4zOTUtLjYwNS4zNTYtMS45MDktLjc5Ni0yLjAyMi0xLjE1Mi0uMTEzLTIuODMgMS4yMDctNC4wMzggMi44NDQtMS4wODQgMS40NS0yLjIgMy45MTEtMy4zMjIgNy4yNzMtLjI3Mi44MTgtLjE0MyAxLjAxMi0uMTEgMS4wNjdhLjEuMSAwIDAgMSAwIC4wOTRjLS4xNDMuMjcyLS45NjUuNTk2LTEuNzYuNTk2LTEuNjI1LS4wMDctMi4yOTEtLjk0NS0xLjk2Ny0yLjQzNy0xLjg0OCAxLjc2NC0zLjcxMSAyLjYxNC01LjM1NSAyLjQ2NmEyLjUyNCAyLjUyNCAwIDAgMS0yLjIzNi0zLjEwM2MtMS40MjYgMS44MDktMy41NDIgMy4yNjgtNS42OTcgMy4wNjctMi4xNTUtLjItMy41LTEuNjY2LTIuODAyLTQuNzg4LjU5LTIuNTk4IDEuNTkyLTUuMjkgMi4yMDctNy4wMjcuNTE0LTEuNDU2LjYxOC0yLjQwNy4yOTQtMi43NS0uMTAzLS4xMTQuMDU1LS4yNS4xOTQtLjMyNCAxLjY5LS44ODYgNC4zOTQtLjMxNCAzLjYzIDIuMDktLjgwMiAyLjUyNy0yLjI1NSA2LjQ5LTIuNTUgNy40LS43MzcgMi4yODctLjI5IDMuNTIzLjc1NSAzLjU4IDEuMDQ1LjA2IDIuNDMtLjk2IDMuNDItMi41MDMgMS43Ni0yLjUyNCAyLjU4MS01LjY4NSAzLjM3Ny03Ljg4Mi4yMDQtLjU2LjUyNy0xLjg2Ni4xODUtMi4zNTItLjA5MS0uMTIzLjA2Ny0uMjU4LjI3NS0uMzcyIDEuNTM3LS44NDkgNC4yODUtLjY0IDMuNDAyIDIuNjA4eiIgZmlsbD0iIzVGMDA4MCIvPgogICAgPC9nPgo8L3N2Zz4K"
-            alt="마켓컬리 로고"
-          />
-          <span class="left-content market">마켓컬리</span>
-          <span class="left-content beauty">뷰티컬리</span>
-        </div>
-        <div class="title-middle">
-          <div class="search">
-            <input
-              class="search-box"
-              type="text"
-              required
-              placeholder="검색어를 입력해주세요"
-            />
-            <button class="submit">
-              <!-- <img
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght&family=Noto+Sans:wght&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style/style.css" />
+		<script defer src="./main.js"></script>
+		<title>컬리 - 마켓컬리/뷰티컬리</title>
+	</head>
+	<body>
+		<section class="header">
+			<div class="customer">
+				<span class="cus-content sign-up">회원가입</span>
+				<span class="cus-content sign-in">로그인</span>
+				<span class="cus-content support">고객센터</span>
+			</div>
+			<div class="title">
+				<div class="title-left">
+					<img
+						src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA4MiA0MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0ibm9uZSI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg4MnY0MkgweiIvPgogICAgICAgIDxwYXRoIGQ9Ik02Mi41Ljk2NWMxLjAyNi0uNTU3IDIuNDY2LS43MTggMy4zNTYuMTA3Ljg5LjgyNS42NzYgMi4wNDggMCAzLjk3MyAwIDAtMS41MDUgNC4wNjYtMy4wNTUgOC4yNjJsLS4zOTggMS4wOGMtMS40MTQgMy44My0yLjc2MiA3LjQ4Ny0yLjkyNyA3Ljk2My0xLjQ5OCA0LjI0NSAxLjk2NyA0LjEyMiA0LjAyNC0uMTUyIDEuMTU5LTIuMzk0IDIuNjQ0LTYuMzU3IDIuNjQ0LTYuMzU3LjUyNC0xLjU2My42ODItMi41MDQuMzU5LTIuODI4LS4xMDctLjExMy4wNDUtLjI1Mi4xOC0uMzIzIDIuMjY5LTEuMTQ5IDQuNjMtLjA3MiAzLjMzNiAzLjMxbC0uMDU0LjEzOGMtLjM4Ny45NzgtMi42OCA2LjczMy0yLjY4IDYuNzMzLS42NzYgMS42Ni0uNTk1IDMuMjM2LjQxOCAzLjIzNi42ODYtLjAwNCAxLjQ2LS4zODUgMi4zMDQtMS4wODggMS44MTgtMS41MDQgMy4yMjItNC4zMTIgMy43MjctNS40NTQuMjMtLjUwOCAxLjA4Ny0yLjQyIDEuNzY2LTQuMzYxLjIzNi0uNjY1LjM2OS0xLjM2LjM5NS0yLjA2NWEuNDQzLjQ0MyAwIDAgMSAuMTk0LS40NTkgMy41NzggMy41NzggMCAwIDEgMS42Ny0uNDIgMS44MDUgMS44MDUgMCAwIDEgMS40NjUuNzA1Yy40NDMuNTk4LjU2NiAxLjU3OS4xMDMgMi44MDgtLjEyLjMyLTMuNzc1IDkuOTU4LTMuNzc1IDkuOTU4di4wMjZjMi4wNDEtMS4yMjMgMy44Ny0xLjMxMyA0Ljk1My0uODU0bC0uMDAzLS4wMTNjMS40OTUuNjQ3IDEuOTkgMi40NC45MzggMy41NTktLjEwMy4xMS0uMzYyLjA4NC0uMzYyLS4wOS0uMDk0LTEuMjUzLTIuNTE3LTMuNDk1LTYuMTA5LTEuMDc1bC0uMTQ1LjM4NS0xLjA2OCAyLjgwOGMtMi42MiA3LjAxOC01LjQwMyAxMi4xMzYtOS40MTUgMTEtMi42ODgtLjc2LTIuMzc3LTQuNjA3LjUxNS03Ljc5YTU0LjkgNTQuOSAwIDAgMSA2LjQ5LTUuODk4Yy4wNjgtLjE4OC4xMy0uMzUuMTg4LS41MTEuMjc4LS43OC40OTEtMS40MzQuNzkyLTIuMjY1bC4xNTktLjUxOGMtLjE3OC4yLS40OTguNTczLS43MTIuODEyLS43MTIuOC0yLjQ5NCAyLjc1Ny01LjMyOSAyLjIwN2wtLjIzNC0uMDUyYy0yLjA1LS41MDgtMi42MDgtMS45ODYtMi42NTUtMy4yNzctMi4xNDIgMi42NTYtNC4zNTEgMy40MjYtNS44MDcgMy4zOS0xLjk0OC0uMDQ4LTMuMzc4LTEuNTE0LTIuNDI3LTQuMjkgMS4wNTgtMy4xMDYgNS41LTE1LjMzMiA2Ljc5NS0xOSAuNDg1LTEuNTguNjY2LTIuNTguMTg0LTIuOTc0LS4xMjMtLjEwMy4wNTItLjI2NS4yLS4zNDZ6bTguMzY0IDI4Ljc3OGMtMS4xMDMuODgtNS41MjYgNC41My02Ljc1MiA3LjQ0MS0uNTA1IDEuMTk3LS4zNzYgMi4xNDkuNDg4IDIuMjMzIDEuOTYuMTk0IDQuMDEyLTMuODE4IDYuMjI4LTkuNTEyek0xNi4wMjggNS4zNTJjLS4wODcuMzMyLTEuMzE5IDMuODYtMi43MDEgNy43NDlsLS4yMDkuNTg2LS4yMS41ODktLjIxNS42MDRjNC42OTEtMS4xMjMgMTMuMDY0LTYuNTcgMTQuMDM1LTEwLjA4NS4xMi0uMTYxLjI5LS4yMi41NjYtLjAzNS40OTUuMzMuNjg2IDEuMTU1LjQ5NSAxLjkxOC0uNzY0IDMuMDM4LTYuNDE2IDcuMzQxLTExLjM3OSA5LjU1NC42MTIgMS42MzcgMi42ODIgNi4yNjcgNC4yMDYgOS4xMTEgMS42NjMgMy4xMTkgMy40MiA0LjU3NSA2LjE0NyA0LjczNyAxLjQ2LjA4NSAzLjAxNC0uNDQ3IDMuODkzLTEuMjJsLjE0OC0uMTQtLjAxMy4wM2MuMTk0LS4yMDQuNTExLjA3Ny4zNjYuMzIzYTYuNSA2LjUgMCAwIDEtNC45OTIgMi44NjdjLTYuMzQ1LjQyNy04Ljc3NC0zLjg3LTEzLjMwNC0xNC40OTQtLjM2Ni4xMjYtLjgwOS4yODgtMS4yNTUuNDUtLjA3NS4xODctMi4wNyA1LjY0Mi0yLjEzIDUuODIzLS45NDQgMi44Ny0xLjAwNSA0LjQ0Mi0uMzU4IDQuODk1LjE0NS4wOS4wNzQuMzMzLS4xNzguNDE0LTIuNTI3Ljc5Ni00Ljg1My0uNjk2LTMuNTU5LTQuNDQyIDEuMTYxLTMuMzE2IDUuNjktMTYuMTggNi45MTQtMTkuNjI2LjQyNy0xLjI5NC4xOTctMi4xMjUtLjQ5Mi0yLjMwNkM4LjUwNiAxLjc4Ljg3NyA4Ljc0OSAxLjk3MSAxNS4xODRjLjE5IDEuMTIuOTggMS43NDcgMS4zNzggMS42NjNhLjEzMy4xMzMgMCAwIDEgLjE1Ni4xNTkgMS41MDggMS41MDggMCAwIDEtMS44NDUgMS4wMzJDLjQ5IDE3Ljc4Mi4xMDcgMTYuNTI3LjA0MyAxNS44OC0uNjAxIDkuMjIgNi4xNDggMS4yMyAxMi4zODkuNThjMi4zNzgtLjI1IDQuNjEuOTYgMy42NCA0Ljc3MnptMjQuMDQgOS45MTMtLjA2LjIwNy0yLjgzIDguMTZjLS4zMDQuODUtLjEgMS43MzcuNTAxIDEuOTAyIDEuNzU3LjQ4MiA0LjAyOC0yLjE0NSA1LjEzMS00LjczM2E2Ny43OTQgNjcuNzk0IDAgMCAwIDEuNDc2LTMuODE1Yy41ODItMS42NDMgMS4xMDYtMy4xODMuNzgzLTMuOTA4LS4wNzUtLjE2OC4wNDUtLjI1Ni4yMjMtLjM1LjUwNS0uMjU1IDIuMjI2LS44MjUgMy4xNDEuMDY4LjY5NS42NzQuNjA5IDEuNzcxLS4wMyAzLjQzN2wtLjA5Ni4yNDIuMjItLjI3M2MyLjcwMy0zLjMgNC43OTItNC4yOTIgNi41NjMtMy41OTdsLjE0Ny4wNjJjMi4zODEgMS4wNzQgMS4xNDYgNS4yMTUtMi4xMTYgNS40OC0uMi4wMTctLjM1Ni0uMTI2LS4xNTgtLjQwNy4zOTUtLjYwNS4zNTYtMS45MDktLjc5Ni0yLjAyMi0xLjE1Mi0uMTEzLTIuODMgMS4yMDctNC4wMzggMi44NDQtMS4wODQgMS40NS0yLjIgMy45MTEtMy4zMjIgNy4yNzMtLjI3Mi44MTgtLjE0MyAxLjAxMi0uMTEgMS4wNjdhLjEuMSAwIDAgMSAwIC4wOTRjLS4xNDMuMjcyLS45NjUuNTk2LTEuNzYuNTk2LTEuNjI1LS4wMDctMi4yOTEtLjk0NS0xLjk2Ny0yLjQzNy0xLjg0OCAxLjc2NC0zLjcxMSAyLjYxNC01LjM1NSAyLjQ2NmEyLjUyNCAyLjUyNCAwIDAgMS0yLjIzNi0zLjEwM2MtMS40MjYgMS44MDktMy41NDIgMy4yNjgtNS42OTcgMy4wNjctMi4xNTUtLjItMy41LTEuNjY2LTIuODAyLTQuNzg4LjU5LTIuNTk4IDEuNTkyLTUuMjkgMi4yMDctNy4wMjcuNTE0LTEuNDU2LjYxOC0yLjQwNy4yOTQtMi43NS0uMTAzLS4xMTQuMDU1LS4yNS4xOTQtLjMyNCAxLjY5LS44ODYgNC4zOTQtLjMxNCAzLjYzIDIuMDktLjgwMiAyLjUyNy0yLjI1NSA2LjQ5LTIuNTUgNy40LS43MzcgMi4yODctLjI5IDMuNTIzLjc1NSAzLjU4IDEuMDQ1LjA2IDIuNDMtLjk2IDMuNDItMi41MDMgMS43Ni0yLjUyNCAyLjU4MS01LjY4NSAzLjM3Ny03Ljg4Mi4yMDQtLjU2LjUyNy0xLjg2Ni4xODUtMi4zNTItLjA5MS0uMTIzLjA2Ny0uMjU4LjI3NS0uMzcyIDEuNTM3LS44NDkgNC4yODUtLjY0IDMuNDAyIDIuNjA4eiIgZmlsbD0iIzVGMDA4MCIvPgogICAgPC9nPgo8L3N2Zz4K"
+						alt="마켓컬리 로고"
+					/>
+					<span class="left-content market">마켓컬리</span>
+					<span class="left-content beauty">뷰티컬리</span>
+				</div>
+				<div class="title-middle">
+					<div class="search">
+						<input class="search-box" type="text" required placeholder="검색어를 입력해주세요" />
+						<button class="submit">
+							<!-- <img
                 src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgzNnYzNkgweiIvPgogICAgICAgIDxnIHN0cm9rZT0iIzVGMDA4MCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Im0yNi4wODEgMjYuMDgxLTQuMTItNC4xMk0xNi40NjcgMjMuMzM0YTYuODY3IDYuODY3IDAgMSAwIDAtMTMuNzM0IDYuODY3IDYuODY3IDAgMCAwIDAgMTMuNzM0eiIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg=="
                 alt=""
               /> -->
-            </button>
-          </div>
-        </div>
-        <div class="title-right">
-          <div class="right-icon location"></div>
-          <div class="right-icon heart"></div>
-          <div class="right-icon shopping"></div>
-        </div>
-      </div>
-      <div class="nav">
-        <div class="category">
-          <div class="cate-content cate-icon"></div>
-          <span class="cate-content cate-text">카테고리</span>
-        </div>
-        <ul class="tab">
-          <li class="tab-content">신상품</li>
-          <li class="tab-content">베스트</li>
-          <li class="tab-content">알뜰쇼핑</li>
-          <li class="tab-content">특가/혜택</li>
-        </ul>
-        <div class="guide">
-          <span class="guide-style">샛별・택배</span> 배송안내
-        </div>
-      </div>
-    </section>
-    <div class="shadow"></div>
-    <section class="main">
-      <div class="banner">
-        <div class="banner-img">
-          <img
-            src="https://product-image.kurly.com/cdn-cgi/image/quality=85/banner/main/pc/img/e6bbfa0b-004d-4b9c-923b-02c4521af50d.jpg"
-            alt="광고배너"
-          />
-        </div>
-      </div>
-      <div class="main-box recommend">
-        <div class="box-title">이 상품 어때요?</div>
-        <div class="box-content">
-          <div class="product">
-            <img
-              class="product-img"
-              src="https://img-cf.kurly.com/shop/data/goods/1615531227660l0.jpg"
-              alt="상품 이미지"
-            />
-            <div class="product-info">
-              <div class="product-name">
-                [크라운] 참쌀선과 115g (5.8g x 20봉지)
-              </div>
-              <div class="product-price">2,180원</div>
-              <div class="product-review">
-                <div class="review-icon">
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <mask id="path-1-inside-1_1513_17755" fill="white">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M3 2C1.89543 2 1 2.89543 1 4V8.67201C1 9.77658 1.89543 10.672 3 10.672H5.11212L6.33682 12.7653C6.5299 13.0954 7.00688 13.0954 7.19995 12.7653L8.42465 10.672H10.5C11.6046 10.672 12.5 9.77658 12.5 8.67201V4C12.5 2.89543 11.6046 2 10.5 2H3Z"
-                      ></path>
-                    </mask>
-                    <path
-                      fill="#999"
-                      d="M5.11212 10.672L5.97526 10.167L5.68564 9.67201H5.11212V10.672ZM6.33682 12.7653L5.47369 13.2703L5.47369 13.2703L6.33682 12.7653ZM7.19995 12.7653L6.33682 12.2604L6.33682 12.2604L7.19995 12.7653ZM8.42465 10.672V9.67201H7.85113L7.56152 10.167L8.42465 10.672ZM2 4C2 3.44772 2.44772 3 3 3V1C1.34315 1 0 2.34315 0 4H2ZM2 8.67201V4H0V8.67201H2ZM3 9.67201C2.44772 9.67201 2 9.22429 2 8.67201H0C0 10.3289 1.34315 11.672 3 11.672V9.67201ZM5.11212 9.67201H3V11.672H5.11212V9.67201ZM7.19995 12.2604L5.97526 10.167L4.24899 11.177L5.47369 13.2703L7.19995 12.2604ZM6.33682 12.2604C6.5299 11.9304 7.00688 11.9304 7.19995 12.2604L5.47369 13.2703C6.05291 14.2604 7.48386 14.2604 8.06309 13.2703L6.33682 12.2604ZM7.56152 10.167L6.33682 12.2604L8.06309 13.2703L9.28779 11.177L7.56152 10.167ZM10.5 9.67201H8.42465V11.672H10.5V9.67201ZM11.5 8.67201C11.5 9.22429 11.0523 9.67201 10.5 9.67201V11.672C12.1569 11.672 13.5 10.3289 13.5 8.67201H11.5ZM11.5 4V8.67201H13.5V4H11.5ZM10.5 3C11.0523 3 11.5 3.44772 11.5 4H13.5C13.5 2.34315 12.1569 1 10.5 1V3ZM3 3H10.5V1H3V3Z"
-                      mask="url(#path-1-inside-1_1513_17755)"
-                    ></path>
-                    <circle
-                      fill="#999"
-                      cx="4.34998"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                    <circle
-                      fill="#999"
-                      cx="6.75"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                    <circle
-                      fill="#999"
-                      cx="9.15002"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                  </svg>
-                </div>
-                <div class="review-count">후기 999+</div>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <img
-              class="product-img"
-              src="https://img-cf.kurly.com/shop/data/goods/1609914448361l0.jpg"
-              alt="상품 이미지"
-            />
-            <div class="product-info">
-              <div class="product-name">
-                [오덴세] 테누노 티스폰 4P 세트 3종 (택1)
-              </div>
-              <div class="product-price">39,000원</div>
-              <div class="product-review">
-                <div class="review-icon">
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <mask id="path-1-inside-1_1513_17755" fill="white">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M3 2C1.89543 2 1 2.89543 1 4V8.67201C1 9.77658 1.89543 10.672 3 10.672H5.11212L6.33682 12.7653C6.5299 13.0954 7.00688 13.0954 7.19995 12.7653L8.42465 10.672H10.5C11.6046 10.672 12.5 9.77658 12.5 8.67201V4C12.5 2.89543 11.6046 2 10.5 2H3Z"
-                      ></path>
-                    </mask>
-                    <path
-                      fill="#999"
-                      d="M5.11212 10.672L5.97526 10.167L5.68564 9.67201H5.11212V10.672ZM6.33682 12.7653L5.47369 13.2703L5.47369 13.2703L6.33682 12.7653ZM7.19995 12.7653L6.33682 12.2604L6.33682 12.2604L7.19995 12.7653ZM8.42465 10.672V9.67201H7.85113L7.56152 10.167L8.42465 10.672ZM2 4C2 3.44772 2.44772 3 3 3V1C1.34315 1 0 2.34315 0 4H2ZM2 8.67201V4H0V8.67201H2ZM3 9.67201C2.44772 9.67201 2 9.22429 2 8.67201H0C0 10.3289 1.34315 11.672 3 11.672V9.67201ZM5.11212 9.67201H3V11.672H5.11212V9.67201ZM7.19995 12.2604L5.97526 10.167L4.24899 11.177L5.47369 13.2703L7.19995 12.2604ZM6.33682 12.2604C6.5299 11.9304 7.00688 11.9304 7.19995 12.2604L5.47369 13.2703C6.05291 14.2604 7.48386 14.2604 8.06309 13.2703L6.33682 12.2604ZM7.56152 10.167L6.33682 12.2604L8.06309 13.2703L9.28779 11.177L7.56152 10.167ZM10.5 9.67201H8.42465V11.672H10.5V9.67201ZM11.5 8.67201C11.5 9.22429 11.0523 9.67201 10.5 9.67201V11.672C12.1569 11.672 13.5 10.3289 13.5 8.67201H11.5ZM11.5 4V8.67201H13.5V4H11.5ZM10.5 3C11.0523 3 11.5 3.44772 11.5 4H13.5C13.5 2.34315 12.1569 1 10.5 1V3ZM3 3H10.5V1H3V3Z"
-                      mask="url(#path-1-inside-1_1513_17755)"
-                    ></path>
-                    <circle
-                      fill="#999"
-                      cx="4.34998"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                    <circle
-                      fill="#999"
-                      cx="6.75"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                    <circle
-                      fill="#999"
-                      cx="9.15002"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                  </svg>
-                </div>
-                <div class="review-count">후기 42</div>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <img
-              class="product-img"
-              src="https://img-cf.kurly.com/shop/data/goods/1625034060255l0.jpg"
-              alt="상품 이미지"
-            />
-            <div class="product-info">
-              <div class="product-name">[크라운] 뽀또 치즈타르트 322g</div>
-              <div class="product-price">4,240원</div>
-              <div class="product-review">
-                <div class="review-icon">
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <mask id="path-1-inside-1_1513_17755" fill="white">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M3 2C1.89543 2 1 2.89543 1 4V8.67201C1 9.77658 1.89543 10.672 3 10.672H5.11212L6.33682 12.7653C6.5299 13.0954 7.00688 13.0954 7.19995 12.7653L8.42465 10.672H10.5C11.6046 10.672 12.5 9.77658 12.5 8.67201V4C12.5 2.89543 11.6046 2 10.5 2H3Z"
-                      ></path>
-                    </mask>
-                    <path
-                      fill="#999"
-                      d="M5.11212 10.672L5.97526 10.167L5.68564 9.67201H5.11212V10.672ZM6.33682 12.7653L5.47369 13.2703L5.47369 13.2703L6.33682 12.7653ZM7.19995 12.7653L6.33682 12.2604L6.33682 12.2604L7.19995 12.7653ZM8.42465 10.672V9.67201H7.85113L7.56152 10.167L8.42465 10.672ZM2 4C2 3.44772 2.44772 3 3 3V1C1.34315 1 0 2.34315 0 4H2ZM2 8.67201V4H0V8.67201H2ZM3 9.67201C2.44772 9.67201 2 9.22429 2 8.67201H0C0 10.3289 1.34315 11.672 3 11.672V9.67201ZM5.11212 9.67201H3V11.672H5.11212V9.67201ZM7.19995 12.2604L5.97526 10.167L4.24899 11.177L5.47369 13.2703L7.19995 12.2604ZM6.33682 12.2604C6.5299 11.9304 7.00688 11.9304 7.19995 12.2604L5.47369 13.2703C6.05291 14.2604 7.48386 14.2604 8.06309 13.2703L6.33682 12.2604ZM7.56152 10.167L6.33682 12.2604L8.06309 13.2703L9.28779 11.177L7.56152 10.167ZM10.5 9.67201H8.42465V11.672H10.5V9.67201ZM11.5 8.67201C11.5 9.22429 11.0523 9.67201 10.5 9.67201V11.672C12.1569 11.672 13.5 10.3289 13.5 8.67201H11.5ZM11.5 4V8.67201H13.5V4H11.5ZM10.5 3C11.0523 3 11.5 3.44772 11.5 4H13.5C13.5 2.34315 12.1569 1 10.5 1V3ZM3 3H10.5V1H3V3Z"
-                      mask="url(#path-1-inside-1_1513_17755)"
-                    ></path>
-                    <circle
-                      fill="#999"
-                      cx="4.34998"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                    <circle
-                      fill="#999"
-                      cx="6.75"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                    <circle
-                      fill="#999"
-                      cx="9.15002"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                  </svg>
-                </div>
-                <div class="review-count">후기 863</div>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <img
-              class="product-img"
-              src="https://img-cf.kurly.com/shop/data/goods/1655703620192l0.jpg"
-              alt="상품 이미지"
-            />
-            <div class="product-info">
-              <div class="product-name">[YOZM] 플레인그릭요거트 100g</div>
-              <div class="product-price">3,900원</div>
-              <div class="product-review">
-                <div class="review-icon">
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <mask id="path-1-inside-1_1513_17755" fill="white">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M3 2C1.89543 2 1 2.89543 1 4V8.67201C1 9.77658 1.89543 10.672 3 10.672H5.11212L6.33682 12.7653C6.5299 13.0954 7.00688 13.0954 7.19995 12.7653L8.42465 10.672H10.5C11.6046 10.672 12.5 9.77658 12.5 8.67201V4C12.5 2.89543 11.6046 2 10.5 2H3Z"
-                      ></path>
-                    </mask>
-                    <path
-                      fill="#999"
-                      d="M5.11212 10.672L5.97526 10.167L5.68564 9.67201H5.11212V10.672ZM6.33682 12.7653L5.47369 13.2703L5.47369 13.2703L6.33682 12.7653ZM7.19995 12.7653L6.33682 12.2604L6.33682 12.2604L7.19995 12.7653ZM8.42465 10.672V9.67201H7.85113L7.56152 10.167L8.42465 10.672ZM2 4C2 3.44772 2.44772 3 3 3V1C1.34315 1 0 2.34315 0 4H2ZM2 8.67201V4H0V8.67201H2ZM3 9.67201C2.44772 9.67201 2 9.22429 2 8.67201H0C0 10.3289 1.34315 11.672 3 11.672V9.67201ZM5.11212 9.67201H3V11.672H5.11212V9.67201ZM7.19995 12.2604L5.97526 10.167L4.24899 11.177L5.47369 13.2703L7.19995 12.2604ZM6.33682 12.2604C6.5299 11.9304 7.00688 11.9304 7.19995 12.2604L5.47369 13.2703C6.05291 14.2604 7.48386 14.2604 8.06309 13.2703L6.33682 12.2604ZM7.56152 10.167L6.33682 12.2604L8.06309 13.2703L9.28779 11.177L7.56152 10.167ZM10.5 9.67201H8.42465V11.672H10.5V9.67201ZM11.5 8.67201C11.5 9.22429 11.0523 9.67201 10.5 9.67201V11.672C12.1569 11.672 13.5 10.3289 13.5 8.67201H11.5ZM11.5 4V8.67201H13.5V4H11.5ZM10.5 3C11.0523 3 11.5 3.44772 11.5 4H13.5C13.5 2.34315 12.1569 1 10.5 1V3ZM3 3H10.5V1H3V3Z"
-                      mask="url(#path-1-inside-1_1513_17755)"
-                    ></path>
-                    <circle
-                      fill="#999"
-                      cx="4.34998"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                    <circle
-                      fill="#999"
-                      cx="6.75"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                    <circle
-                      fill="#999"
-                      cx="9.15002"
-                      cy="6.17871"
-                      r="0.75"
-                    ></circle>
-                  </svg>
-                </div>
-                <div class="review-count">후기 9,999+</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main-box notice">
-        <img
-          src="https://product-image.kurly.com/banner/random-band/pc/img/df7fad64-8210-4f23-ada1-5088a348a959.jpg"
-          alt=""
-        />
-      </div>
-      <div class="main-box collection">
-        <div class="collection-top">
-          <div class="collection-left">
-            <img
-              class="left-img"
-              src="https://product-image.kurly.com/main/random-collection/article/pc/img/cf6c02e7-328a-47de-900d-6fc47455a86b.png"
-              alt="상품 이미지"
-            />
-          </div>
-          <div class="collection-right">
-            <strong class="right-top">한 잔을 부르는 봄밤 🌠</strong>
-            <p class="right-bottom">
-              따뜻한 기온 탓에 그냥 보내기 싫은 요즘 저녁. 더 특별한 시간을
-              만들어 줄 아이템을 소개합니다. 멜론의 싱그러움이 느껴지는
-              막걸리부터 와인으로 변신한 과실주 까지. 뻔하지 않은 전통주와
-              함께라면 잊지 못할 올봄 추억을 만들 수 있을 거예요.
-            </p>
-          </div>
-        </div>
-        <div class="collection-bottom">
-          <ul class="bottom-list">
-            <li class="list-item">
-              <img
-                class="item-img"
-                src="https://3p-image.kurly.com/product-image/546b466a-018d-46a2-9f7f-6814af156774/414e40a0-3085-4949-9904-c21dd45fd051.jpg"
-                alt="상품 이미지"
-              />
-              <div class="item-content">
-                <div class="content-name">[전통주] 허니문배(4.9도 750ml)</div>
-                <div class="content-price">16,100원</div>
-              </div>
-              <button class="item-button"></button>
-            </li>
-            <li class="list-item">
-              <img
-                class="item-img"
-                src="https://3p-image.kurly.com/product-image/546b466a-018d-46a2-9f7f-6814af156774/745d9b2d-8590-4b6c-b47a-178c930d5b33.jpg"
-                alt="상품 이미지"
-              />
-              <div class="item-content">
-                <div class="content-name">
-                  [전통주] 심술 3종 (택1)(7도 330ml)
-                </div>
-                <div class="content-price">2,500원</div>
-              </div>
-              <button class="item-button"></button>
-            </li>
-            <li class="list-item">
-              <img
-                class="item-img"
-                src="https://3p-image.kurly.com/product-image/ff51c73d-ad70-486d-90be-4bd1a61c6a7f/308458b8-0209-4635-b2ab-9ff4b00d0f0a.jpg"
-                alt="상품 이미지"
-              />
-              <div class="item-content">
-                <div class="content-name">[전통주] 복순도가 혼합 2종 세트</div>
-                <div class="content-price">28,000원</div>
-              </div>
-              <button class="item-button"></button>
-            </li>
-            <li class="list-item">
-              <img
-                class="item-img"
-                src="https://3p-image.kurly.com/product-image/546b466a-018d-46a2-9f7f-6814af156774/c5927b8f-696b-4c06-99ab-ec35ecf6df16.jpg"
-                alt="상품 이미지"
-              />
-              <div class="item-content">
-                <div class="content-name">[전통주] 빙탄복(7도 370ml)</div>
-                <div class="content-price">4,500원</div>
-              </div>
-              <button class="item-button"></button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </body>
+						</button>
+					</div>
+				</div>
+				<div class="title-right">
+					<div class="right-icon location"></div>
+					<div class="right-icon heart"></div>
+					<div class="right-icon shopping"></div>
+				</div>
+			</div>
+			<div class="nav">
+				<div class="category">
+					<div class="cate-content cate-icon"></div>
+					<span class="cate-content cate-text">카테고리</span>
+				</div>
+				<ul class="tab">
+					<li class="tab-content">신상품</li>
+					<li class="tab-content">베스트</li>
+					<li class="tab-content">알뜰쇼핑</li>
+					<li class="tab-content">특가/혜택</li>
+				</ul>
+				<div class="guide"><span class="guide-style">샛별・택배</span> 배송안내</div>
+			</div>
+		</section>
+		<div class="shadow"></div>
+		<section class="main">
+			<div class="banner">
+				<div class="banner-img">
+					<img
+						class="non-view"
+						src="https://product-image.kurly.com/cdn-cgi/image/quality=85/banner/main/pc/img/e6bbfa0b-004d-4b9c-923b-02c4521af50d.jpg"
+						alt="광고배너"
+					/>
+					<img
+						class="non-view"
+						src="https://product-image.kurly.com/cdn-cgi/image/quality=85/banner/main/pc/img/20139e33-d871-4de9-a2e8-18a3024af36d.jpg"
+						alt="광고배너"
+					/>
+					<img
+						class="non-view"
+						src="https://product-image.kurly.com/cdn-cgi/image/quality=85/banner/main/pc/img/fe5252d5-1af1-4e88-8c25-1e2c22beda61.jpg"
+						alt="광고배너"
+					/>
+					<img
+						class="non-view"
+						src="https://product-image.kurly.com/cdn-cgi/image/quality=85/banner/main/pc/img/7bf13b1c-a08b-495f-af5d-56cfa900eb39.jpg"
+						alt="광고배너"
+					/>
+					<img
+						class="non-view"
+						src="https://product-image.kurly.com/cdn-cgi/image/quality=85/banner/main/pc/img/ef5da663-4c2a-48cf-be5a-b39cc452b5b2.jpg"
+						alt="광고배너"
+					/>
+				</div>
+			</div>
+			<div class="main-box recommend">
+				<div class="box-title">이 상품 어때요?</div>
+				<div class="box-content">
+					<div class="product">
+						<img
+							class="product-img"
+							src="https://img-cf.kurly.com/shop/data/goods/1615531227660l0.jpg"
+							alt="상품 이미지"
+						/>
+						<div class="product-info">
+							<div class="product-name">[크라운] 참쌀선과 115g (5.8g x 20봉지)</div>
+							<div class="product-price">2,180원</div>
+							<div class="product-review">
+								<div class="review-icon">
+									<svg width="100%" height="100%" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask id="path-1-inside-1_1513_17755" fill="white">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M3 2C1.89543 2 1 2.89543 1 4V8.67201C1 9.77658 1.89543 10.672 3 10.672H5.11212L6.33682 12.7653C6.5299 13.0954 7.00688 13.0954 7.19995 12.7653L8.42465 10.672H10.5C11.6046 10.672 12.5 9.77658 12.5 8.67201V4C12.5 2.89543 11.6046 2 10.5 2H3Z"
+											></path>
+										</mask>
+										<path
+											fill="#999"
+											d="M5.11212 10.672L5.97526 10.167L5.68564 9.67201H5.11212V10.672ZM6.33682 12.7653L5.47369 13.2703L5.47369 13.2703L6.33682 12.7653ZM7.19995 12.7653L6.33682 12.2604L6.33682 12.2604L7.19995 12.7653ZM8.42465 10.672V9.67201H7.85113L7.56152 10.167L8.42465 10.672ZM2 4C2 3.44772 2.44772 3 3 3V1C1.34315 1 0 2.34315 0 4H2ZM2 8.67201V4H0V8.67201H2ZM3 9.67201C2.44772 9.67201 2 9.22429 2 8.67201H0C0 10.3289 1.34315 11.672 3 11.672V9.67201ZM5.11212 9.67201H3V11.672H5.11212V9.67201ZM7.19995 12.2604L5.97526 10.167L4.24899 11.177L5.47369 13.2703L7.19995 12.2604ZM6.33682 12.2604C6.5299 11.9304 7.00688 11.9304 7.19995 12.2604L5.47369 13.2703C6.05291 14.2604 7.48386 14.2604 8.06309 13.2703L6.33682 12.2604ZM7.56152 10.167L6.33682 12.2604L8.06309 13.2703L9.28779 11.177L7.56152 10.167ZM10.5 9.67201H8.42465V11.672H10.5V9.67201ZM11.5 8.67201C11.5 9.22429 11.0523 9.67201 10.5 9.67201V11.672C12.1569 11.672 13.5 10.3289 13.5 8.67201H11.5ZM11.5 4V8.67201H13.5V4H11.5ZM10.5 3C11.0523 3 11.5 3.44772 11.5 4H13.5C13.5 2.34315 12.1569 1 10.5 1V3ZM3 3H10.5V1H3V3Z"
+											mask="url(#path-1-inside-1_1513_17755)"
+										></path>
+										<circle fill="#999" cx="4.34998" cy="6.17871" r="0.75"></circle>
+										<circle fill="#999" cx="6.75" cy="6.17871" r="0.75"></circle>
+										<circle fill="#999" cx="9.15002" cy="6.17871" r="0.75"></circle>
+									</svg>
+								</div>
+								<div class="review-count">후기 999+</div>
+							</div>
+						</div>
+					</div>
+					<div class="product">
+						<img
+							class="product-img"
+							src="https://img-cf.kurly.com/shop/data/goods/1609914448361l0.jpg"
+							alt="상품 이미지"
+						/>
+						<div class="product-info">
+							<div class="product-name">[오덴세] 테누노 티스폰 4P 세트 3종 (택1)</div>
+							<div class="product-price">39,000원</div>
+							<div class="product-review">
+								<div class="review-icon">
+									<svg width="100%" height="100%" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask id="path-1-inside-1_1513_17755" fill="white">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M3 2C1.89543 2 1 2.89543 1 4V8.67201C1 9.77658 1.89543 10.672 3 10.672H5.11212L6.33682 12.7653C6.5299 13.0954 7.00688 13.0954 7.19995 12.7653L8.42465 10.672H10.5C11.6046 10.672 12.5 9.77658 12.5 8.67201V4C12.5 2.89543 11.6046 2 10.5 2H3Z"
+											></path>
+										</mask>
+										<path
+											fill="#999"
+											d="M5.11212 10.672L5.97526 10.167L5.68564 9.67201H5.11212V10.672ZM6.33682 12.7653L5.47369 13.2703L5.47369 13.2703L6.33682 12.7653ZM7.19995 12.7653L6.33682 12.2604L6.33682 12.2604L7.19995 12.7653ZM8.42465 10.672V9.67201H7.85113L7.56152 10.167L8.42465 10.672ZM2 4C2 3.44772 2.44772 3 3 3V1C1.34315 1 0 2.34315 0 4H2ZM2 8.67201V4H0V8.67201H2ZM3 9.67201C2.44772 9.67201 2 9.22429 2 8.67201H0C0 10.3289 1.34315 11.672 3 11.672V9.67201ZM5.11212 9.67201H3V11.672H5.11212V9.67201ZM7.19995 12.2604L5.97526 10.167L4.24899 11.177L5.47369 13.2703L7.19995 12.2604ZM6.33682 12.2604C6.5299 11.9304 7.00688 11.9304 7.19995 12.2604L5.47369 13.2703C6.05291 14.2604 7.48386 14.2604 8.06309 13.2703L6.33682 12.2604ZM7.56152 10.167L6.33682 12.2604L8.06309 13.2703L9.28779 11.177L7.56152 10.167ZM10.5 9.67201H8.42465V11.672H10.5V9.67201ZM11.5 8.67201C11.5 9.22429 11.0523 9.67201 10.5 9.67201V11.672C12.1569 11.672 13.5 10.3289 13.5 8.67201H11.5ZM11.5 4V8.67201H13.5V4H11.5ZM10.5 3C11.0523 3 11.5 3.44772 11.5 4H13.5C13.5 2.34315 12.1569 1 10.5 1V3ZM3 3H10.5V1H3V3Z"
+											mask="url(#path-1-inside-1_1513_17755)"
+										></path>
+										<circle fill="#999" cx="4.34998" cy="6.17871" r="0.75"></circle>
+										<circle fill="#999" cx="6.75" cy="6.17871" r="0.75"></circle>
+										<circle fill="#999" cx="9.15002" cy="6.17871" r="0.75"></circle>
+									</svg>
+								</div>
+								<div class="review-count">후기 42</div>
+							</div>
+						</div>
+					</div>
+					<div class="product">
+						<img
+							class="product-img"
+							src="https://img-cf.kurly.com/shop/data/goods/1625034060255l0.jpg"
+							alt="상품 이미지"
+						/>
+						<div class="product-info">
+							<div class="product-name">[크라운] 뽀또 치즈타르트 322g</div>
+							<div class="product-price">4,240원</div>
+							<div class="product-review">
+								<div class="review-icon">
+									<svg width="100%" height="100%" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask id="path-1-inside-1_1513_17755" fill="white">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M3 2C1.89543 2 1 2.89543 1 4V8.67201C1 9.77658 1.89543 10.672 3 10.672H5.11212L6.33682 12.7653C6.5299 13.0954 7.00688 13.0954 7.19995 12.7653L8.42465 10.672H10.5C11.6046 10.672 12.5 9.77658 12.5 8.67201V4C12.5 2.89543 11.6046 2 10.5 2H3Z"
+											></path>
+										</mask>
+										<path
+											fill="#999"
+											d="M5.11212 10.672L5.97526 10.167L5.68564 9.67201H5.11212V10.672ZM6.33682 12.7653L5.47369 13.2703L5.47369 13.2703L6.33682 12.7653ZM7.19995 12.7653L6.33682 12.2604L6.33682 12.2604L7.19995 12.7653ZM8.42465 10.672V9.67201H7.85113L7.56152 10.167L8.42465 10.672ZM2 4C2 3.44772 2.44772 3 3 3V1C1.34315 1 0 2.34315 0 4H2ZM2 8.67201V4H0V8.67201H2ZM3 9.67201C2.44772 9.67201 2 9.22429 2 8.67201H0C0 10.3289 1.34315 11.672 3 11.672V9.67201ZM5.11212 9.67201H3V11.672H5.11212V9.67201ZM7.19995 12.2604L5.97526 10.167L4.24899 11.177L5.47369 13.2703L7.19995 12.2604ZM6.33682 12.2604C6.5299 11.9304 7.00688 11.9304 7.19995 12.2604L5.47369 13.2703C6.05291 14.2604 7.48386 14.2604 8.06309 13.2703L6.33682 12.2604ZM7.56152 10.167L6.33682 12.2604L8.06309 13.2703L9.28779 11.177L7.56152 10.167ZM10.5 9.67201H8.42465V11.672H10.5V9.67201ZM11.5 8.67201C11.5 9.22429 11.0523 9.67201 10.5 9.67201V11.672C12.1569 11.672 13.5 10.3289 13.5 8.67201H11.5ZM11.5 4V8.67201H13.5V4H11.5ZM10.5 3C11.0523 3 11.5 3.44772 11.5 4H13.5C13.5 2.34315 12.1569 1 10.5 1V3ZM3 3H10.5V1H3V3Z"
+											mask="url(#path-1-inside-1_1513_17755)"
+										></path>
+										<circle fill="#999" cx="4.34998" cy="6.17871" r="0.75"></circle>
+										<circle fill="#999" cx="6.75" cy="6.17871" r="0.75"></circle>
+										<circle fill="#999" cx="9.15002" cy="6.17871" r="0.75"></circle>
+									</svg>
+								</div>
+								<div class="review-count">후기 863</div>
+							</div>
+						</div>
+					</div>
+					<div class="product">
+						<img
+							class="product-img"
+							src="https://img-cf.kurly.com/shop/data/goods/1655703620192l0.jpg"
+							alt="상품 이미지"
+						/>
+						<div class="product-info">
+							<div class="product-name">[YOZM] 플레인그릭요거트 100g</div>
+							<div class="product-price">3,900원</div>
+							<div class="product-review">
+								<div class="review-icon">
+									<svg width="100%" height="100%" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask id="path-1-inside-1_1513_17755" fill="white">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M3 2C1.89543 2 1 2.89543 1 4V8.67201C1 9.77658 1.89543 10.672 3 10.672H5.11212L6.33682 12.7653C6.5299 13.0954 7.00688 13.0954 7.19995 12.7653L8.42465 10.672H10.5C11.6046 10.672 12.5 9.77658 12.5 8.67201V4C12.5 2.89543 11.6046 2 10.5 2H3Z"
+											></path>
+										</mask>
+										<path
+											fill="#999"
+											d="M5.11212 10.672L5.97526 10.167L5.68564 9.67201H5.11212V10.672ZM6.33682 12.7653L5.47369 13.2703L5.47369 13.2703L6.33682 12.7653ZM7.19995 12.7653L6.33682 12.2604L6.33682 12.2604L7.19995 12.7653ZM8.42465 10.672V9.67201H7.85113L7.56152 10.167L8.42465 10.672ZM2 4C2 3.44772 2.44772 3 3 3V1C1.34315 1 0 2.34315 0 4H2ZM2 8.67201V4H0V8.67201H2ZM3 9.67201C2.44772 9.67201 2 9.22429 2 8.67201H0C0 10.3289 1.34315 11.672 3 11.672V9.67201ZM5.11212 9.67201H3V11.672H5.11212V9.67201ZM7.19995 12.2604L5.97526 10.167L4.24899 11.177L5.47369 13.2703L7.19995 12.2604ZM6.33682 12.2604C6.5299 11.9304 7.00688 11.9304 7.19995 12.2604L5.47369 13.2703C6.05291 14.2604 7.48386 14.2604 8.06309 13.2703L6.33682 12.2604ZM7.56152 10.167L6.33682 12.2604L8.06309 13.2703L9.28779 11.177L7.56152 10.167ZM10.5 9.67201H8.42465V11.672H10.5V9.67201ZM11.5 8.67201C11.5 9.22429 11.0523 9.67201 10.5 9.67201V11.672C12.1569 11.672 13.5 10.3289 13.5 8.67201H11.5ZM11.5 4V8.67201H13.5V4H11.5ZM10.5 3C11.0523 3 11.5 3.44772 11.5 4H13.5C13.5 2.34315 12.1569 1 10.5 1V3ZM3 3H10.5V1H3V3Z"
+											mask="url(#path-1-inside-1_1513_17755)"
+										></path>
+										<circle fill="#999" cx="4.34998" cy="6.17871" r="0.75"></circle>
+										<circle fill="#999" cx="6.75" cy="6.17871" r="0.75"></circle>
+										<circle fill="#999" cx="9.15002" cy="6.17871" r="0.75"></circle>
+									</svg>
+								</div>
+								<div class="review-count">후기 9,999+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-box notice">
+				<img
+					src="https://product-image.kurly.com/banner/random-band/pc/img/df7fad64-8210-4f23-ada1-5088a348a959.jpg"
+					alt=""
+				/>
+			</div>
+			<div class="main-box collection">
+				<div class="collection-top">
+					<div class="collection-left">
+						<img
+							class="left-img"
+							src="https://product-image.kurly.com/main/random-collection/article/pc/img/cf6c02e7-328a-47de-900d-6fc47455a86b.png"
+							alt="상품 이미지"
+						/>
+					</div>
+					<div class="collection-right">
+						<strong class="right-top">한 잔을 부르는 봄밤 🌠</strong>
+						<p class="right-bottom">
+							따뜻한 기온 탓에 그냥 보내기 싫은 요즘 저녁. 더 특별한 시간을 만들어 줄 아이템을 소개합니다. 멜론의
+							싱그러움이 느껴지는 막걸리부터 와인으로 변신한 과실주 까지. 뻔하지 않은 전통주와 함께라면 잊지 못할 올봄
+							추억을 만들 수 있을 거예요.
+						</p>
+					</div>
+				</div>
+				<div class="collection-bottom">
+					<ul class="bottom-list">
+						<li class="list-item">
+							<img
+								class="item-img"
+								src="https://3p-image.kurly.com/product-image/546b466a-018d-46a2-9f7f-6814af156774/414e40a0-3085-4949-9904-c21dd45fd051.jpg"
+								alt="상품 이미지"
+							/>
+							<div class="item-content">
+								<div class="content-name">[전통주] 허니문배(4.9도 750ml)</div>
+								<div class="content-price">16,100원</div>
+							</div>
+							<button class="item-button"></button>
+						</li>
+						<li class="list-item">
+							<img
+								class="item-img"
+								src="https://3p-image.kurly.com/product-image/546b466a-018d-46a2-9f7f-6814af156774/745d9b2d-8590-4b6c-b47a-178c930d5b33.jpg"
+								alt="상품 이미지"
+							/>
+							<div class="item-content">
+								<div class="content-name">[전통주] 심술 3종 (택1)(7도 330ml)</div>
+								<div class="content-price">2,500원</div>
+							</div>
+							<button class="item-button"></button>
+						</li>
+						<li class="list-item">
+							<img
+								class="item-img"
+								src="https://3p-image.kurly.com/product-image/ff51c73d-ad70-486d-90be-4bd1a61c6a7f/308458b8-0209-4635-b2ab-9ff4b00d0f0a.jpg"
+								alt="상품 이미지"
+							/>
+							<div class="item-content">
+								<div class="content-name">[전통주] 복순도가 혼합 2종 세트</div>
+								<div class="content-price">28,000원</div>
+							</div>
+							<button class="item-button"></button>
+						</li>
+						<li class="list-item">
+							<img
+								class="item-img"
+								src="https://3p-image.kurly.com/product-image/546b466a-018d-46a2-9f7f-6814af156774/c5927b8f-696b-4c06-99ab-ec35ecf6df16.jpg"
+								alt="상품 이미지"
+							/>
+							<div class="item-content">
+								<div class="content-name">[전통주] 빙탄복(7도 370ml)</div>
+								<div class="content-price">4,500원</div>
+							</div>
+							<button class="item-button"></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>
