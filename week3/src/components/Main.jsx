@@ -1,12 +1,12 @@
-import Banner from './Banner';
 import CollectionContainer from '../containers/CollectionContainer';
 import ProductContanier from '../containers/ProductContainer';
+import BannerContainer from '../containers/BannerContainer';
 export default function Main() {
 	return (
 		<>
 			<div className="shadow"></div>
 			<div className="main">
-				<Banner />
+				<BannerContainer />
 				<div className="main-box recommend">
 					<div className="box-title">이 상품 어때요?</div>
 					<div className="box-content">
