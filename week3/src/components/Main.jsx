@@ -1,6 +1,6 @@
 import Banner from './Banner';
-import Product from './Product';
-import Collection from './Collection';
+import CollectionContainer from '../containers/CollectionContainer';
+import ProductContanier from '../containers/ProductContainer';
 export default function Main() {
 	return (
 		<>
@@ -10,10 +10,7 @@ export default function Main() {
 				<div className="main-box recommend">
 					<div className="box-title">이 상품 어때요?</div>
 					<div className="box-content">
-						<Product />
-						<Product />
-						<Product />
-						<Product />
+						<ProductContanier />
 					</div>
 				</div>
 				<div className="main-box notice">
@@ -23,7 +20,7 @@ export default function Main() {
 					/>
 				</div>
 				<div className="main-box collection">
-					<Collection />
+					<CollectionContainer />
 				</div>
 			</div>
 		</>

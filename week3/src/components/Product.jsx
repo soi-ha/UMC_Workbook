@@ -1,14 +1,12 @@
-export default function Product() {
+import React from 'react';
+
+export default function Product({ imglink, name, price, review }) {
 	return (
 		<div className="product">
-			<img
-				className="product-img"
-				src="https://img-cf.kurly.com/shop/data/goods/1615531227660l0.jpg"
-				alt="상품 이미지"
-			/>
+			<img className="product-img" src={imglink} alt="상품 이미지" />
 			<div className="product-info">
-				<div className="product-name">[크라운] 참쌀선과 115g (5.8g x 20봉지)</div>
-				<div className="product-price">2,180원</div>
+				<div className="product-name">{name}</div>
+				<div className="product-price">{price}</div>
 				<div className="product-review">
 					<div className="review-icon">
 						<svg width="100%" height="100%" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +27,7 @@ export default function Product() {
 							<circle fill="#999" cx="9.15002" cy="6.17871" r="0.75"></circle>
 						</svg>
 					</div>
-					<div className="review-count">후기 999+</div>
+					<div className="review-count">후기 {review}</div>
 				</div>
 			</div>
 		</div>
