@@ -1,4 +1,11 @@
+// import { forwardRef, useImperativeHandle } from 'react';
+
 export default function Header() {
+	// const Child = forwardRef((props, ref) => {
+	// 	useImperativeHandle(ref, () => ({
+
+	// 	}))
+	// });
 	return (
 		<section className="header">
 			<div className="customer">
