@@ -32,7 +32,6 @@ export default function BannerContainer() {
 			<div className="banner-img">
 				<Swiper
 					modules={[Navigation, Autoplay]}
-					spaceBetween={50}
 					slidesPerView={1}
 					autoplay={{ delay: 5000 }}
 					navigation

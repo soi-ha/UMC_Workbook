@@ -194,12 +194,18 @@ body {
 				}
 				&.market {
 					margin-left: 20px;
+					&:hover {
+						color: var(--kurly-color);
+					}
 				}
 				&.beauty {
 					&::before {
 						content: '|';
 						padding-right: 10px;
 						color: var(--gray-color);
+					}
+					&:hover {
+						color: var(--kurly-color);
 					}
 				}
 			}
