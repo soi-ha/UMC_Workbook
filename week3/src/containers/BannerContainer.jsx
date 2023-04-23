@@ -1,6 +1,6 @@
 import Banner from '../components/Banner';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Autoplay, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -31,12 +31,12 @@ export default function BannerContainer() {
 		<div className="banner">
 			<div className="banner-img">
 				<Swiper
-					modules={[Navigation, Pagination, Autoplay]}
+					modules={[Navigation, Autoplay]}
 					spaceBetween={50}
 					slidesPerView={1}
 					autoplay={{ delay: 5000 }}
 					navigation
-					pagination={{ clickable: true }}
+					loop
 					onSlideChange={() => console.log('slide change')}
 					onSwiper={(swiper) => console.log(swiper)}
 				>

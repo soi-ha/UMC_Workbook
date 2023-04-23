@@ -3,13 +3,16 @@ import './App.scss';
 import Header from './components/Header';
 import Market from './pages/Market';
 import Beauty from './pages/Beauty';
+import { useState } from 'react';
 
 function App() {
+	const [page, setPage] = useState('market');
+
 	return (
 		<>
-			<Header />
-			{/* <Market/> */}
-			<Beauty />
+			<Header color={page} onChange={setPage} />
+			{page === 'market' && <Market />}
+			{page === 'beauty' && <Beauty />}
 		</>
 	);
 }

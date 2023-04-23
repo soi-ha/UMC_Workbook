@@ -3,7 +3,9 @@ import React from 'react';
 export default function Product({ imglink, name, price, review }) {
 	return (
 		<div className="product">
-			<img className="product-img" src={imglink} alt="상품 이미지" />
+			<div className="imgContainer">
+				<img className="product-img" src={imglink} alt="상품 이미지" />
+			</div>
 			<div className="product-info">
 				<div className="product-name">{name}</div>
 				<div className="product-price">{price}</div>
