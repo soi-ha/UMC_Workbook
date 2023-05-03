@@ -1,6 +1,6 @@
 import Product from '../components/Product';
 
-export default function ProductContanier() {
+export default function BeautyProductC() {
 	const product1 = {
 		imglink: 'https://product-image.kurly.com/product/image/e92f3b45-d0c5-47f2-9ecf-40ee1239585a.jpg',
 		name: '[연작] 스킨 퍼펙팅 프로텍티브 베이스프렙',

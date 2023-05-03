@@ -1,7 +1,7 @@
 import BeautyBanner from '../containers/BeautyBanner';
 import BeautyProduct from '../containers/BeautyProduct';
 import BeautyCollection from '../containers/BeautyCollection';
-export default function Main() {
+export default function Beauty() {
 	return (
 		<>
 			<div className="shadow"></div>

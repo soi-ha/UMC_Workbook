@@ -1,6 +1,6 @@
 import Collection from '../components/Collection';
 
-export default function ProductContanier() {
+export default function CollectionContainer() {
 	const collection1 = {
 		imglink:
 			'https://3p-image.kurly.com/product-image/546b466a-018d-46a2-9f7f-6814af156774/414e40a0-3085-4949-9904-c21dd45fd051.jpg',

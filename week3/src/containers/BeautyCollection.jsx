@@ -1,6 +1,6 @@
 import Collection from '../components/Collection';
 
-export default function ProductContanier() {
+export default function BeautyCollection() {
 	const collection1 = {
 		imglink: 'https://img-cf.kurly.com/shop/data/goods/1652971229715l0.jpg',
 		name: '[삐아] 레디 투 웨어 네일 컬러 6종',

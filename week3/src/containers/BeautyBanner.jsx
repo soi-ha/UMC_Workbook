@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 
-export default function BannerContainer() {
+export default function BeautyBanner() {
 	const banner1 = {
 		imglink:
 			'https://product-image.kurly.com/cdn-cgi/image/quality=85/banner/main/pc/img/8842d8c9-2343-4647-8c7c-867cd4919d06.png',
