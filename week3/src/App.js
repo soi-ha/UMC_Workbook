@@ -4,16 +4,25 @@ import Header from './components/Header';
 import Market from './pages/Market';
 import Beauty from './pages/Beauty';
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 	const [page, setPage] = useState('market');
 
 	return (
-		<>
+		<BrowserRouter>
+			{/* <Header color={page} onChange={setPage} /> */}
 			<Header color={page} onChange={setPage} />
-			{page === 'market' && <Market />}
-			{page === 'beauty' && <Beauty />}
-		</>
+			<Routes>
+				<Route path="/" element={<Market />} />
+				<Route path="/beauty" element={<Beauty />} />
+			</Routes>
+		</BrowserRouter>
+		// <>
+		// 	<Header color={page} onChange={setPage} />
+		// 	{page === 'market' && <Market />}
+		// 	{page === 'beauty' && <Beauty />}
+		// </>
 	);
 }
 
