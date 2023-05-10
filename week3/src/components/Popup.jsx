@@ -1,3 +1,39 @@
+import styled from 'styled-components';
+
+styled.button`
+	font-size: var(--font-small);
+	font-weight: 500;
+	border: none;
+	background-color: #96e2d8;
+	padding: 5px;
+	margin: 6px;
+	cursor: pointer;
+`;
+
+const PopupWrapper = styled.div`
+	z-index: 99999;
+	position: fixed;
+	width: 350px;
+	left: 20%;
+	img {
+		width: 350px;
+	}
+`;
+
+const ButtonBox = styled.div`
+	margin-top: -15px;
+	background-color: #96e2d8;
+	button {
+		font-size: var(--font-small);
+		font-weight: 500;
+		border: none;
+		background-color: #96e2d8;
+		padding: 5px;
+		margin: 6px;
+		cursor: pointer;
+	}
+`;
+
 export default function Popup({ setShowMainPop }) {
 	const closePop = () => {
 		setShowMainPop(false);
@@ -14,15 +50,26 @@ export default function Popup({ setShowMainPop }) {
 		setShowMainPop(false);
 	};
 	return (
-		<div className="popup-wrapper">
+		// <div className="popup-wrapper">
+		// 	<img
+		// 		src="https://product-image.kurly.com/category/banner/pc/e5d6bd51-fcc5-4b82-8bb1-c33350cf2537.jpg"
+		// 		alt="팝업창"
+		// 	/>
+		// 	<div className="popup-button">
+		// 		<button onClick={closeTodayPop}>오늘 하루 안 보기</button>
+		// 		<button onClick={closePop}>닫기</button>
+		// 	</div>
+		// </div>
+
+		<PopupWrapper>
 			<img
 				src="https://product-image.kurly.com/category/banner/pc/e5d6bd51-fcc5-4b82-8bb1-c33350cf2537.jpg"
 				alt="팝업창"
 			/>
-			<div className="popup-button">
+			<ButtonBox>
 				<button onClick={closeTodayPop}>오늘 하루 안 보기</button>
 				<button onClick={closePop}>닫기</button>
-			</div>
-		</div>
+			</ButtonBox>
+		</PopupWrapper>
 	);
 }

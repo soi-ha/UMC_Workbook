@@ -341,28 +341,28 @@ body {
 }
 
 // Popup
-.popup-wrapper {
-	z-index: 99999;
-	position: fixed;
-	width: 350px;
-	left: 20%;
-	img {
-		width: 350px;
-	}
-	.popup-button {
-		margin-top: -15px;
-		background-color: #96e2d8;
-		button {
-			font-size: var(--font-small);
-			font-weight: 500;
-			border: none;
-			background-color: #96e2d8;
-			padding: 5px;
-			margin: 6px;
-			cursor: pointer;
-		}
-	}
-}
+// .popup-wrapper {
+// 	z-index: 99999;
+// 	position: fixed;
+// 	width: 350px;
+// 	left: 20%;
+// 	img {
+// 		width: 350px;
+// 	}
+// 	.popup-button {
+// 		margin-top: -15px;
+// 		background-color: #96e2d8;
+// 		button {
+// 			font-size: var(--font-small);
+// 			font-weight: 500;
+// 			border: none;
+// 			background-color: #96e2d8;
+// 			padding: 5px;
+// 			margin: 6px;
+// 			cursor: pointer;
+// 		}
+// 	}
+// }
 
 // Main
 .main {
