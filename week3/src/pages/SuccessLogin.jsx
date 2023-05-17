@@ -10,8 +10,8 @@ const Message = styled.div`
 export default function FailLogin() {
 	return (
 		<>
-			<Message>로그인에 실패하셨습니다.</Message>
-			<Message>다시 시도해주세요.</Message>
+			<Message>로그인에 성공하셨습니다.</Message>
+			<Message>가입을 축하합니다🥳</Message>
 		</>
 	);
 }

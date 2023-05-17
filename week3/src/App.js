@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import KakaoLogin from './pages/KakaoLogin';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import FailLogin from './pages/FailLogin';
+import SuccessLogin from './pages/SuccessLogin';
 
 function App() {
 	const [page, setPage] = useState('market');
@@ -20,6 +22,8 @@ function App() {
 				<Route path="/beauty" element={<Beauty />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/kakaologin" element={<KakaoLogin />} />
+				<Route path="/faillogin" element={<FailLogin />} />
+				<Route path="/successlogin" element={<SuccessLogin />} />
 			</Routes>
 		</BrowserRouter>
 		// <>
