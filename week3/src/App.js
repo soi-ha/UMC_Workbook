@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Market from './pages/Market';
 import Beauty from './pages/Beauty';
 import Login from './pages/Login';
+import SuccessLogin from './pages/SuccessLogin';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/" element={<Market />} />
 				<Route path="/beauty" element={<Beauty />} />
 				<Route path="/login" element={<Login />} />
+				<Route path="/successlogin" element={<SuccessLogin />} />
 			</Routes>
 		</BrowserRouter>
 		// <>
