@@ -162,8 +162,8 @@ body {
 		margin-top: 10px;
 		.cus-content {
 			padding: 4px;
-			&.sign-up {
-				color: var(--kurly-color);
+			&.sign-in {
+				color: #333333;
 			}
 			&::after {
 				color: var(--gray-color);
@@ -172,6 +172,9 @@ body {
 			}
 			&:last-child::after {
 				content: none;
+			}
+			&:hover {
+				color: var(--kurly-color);
 			}
 		}
 	}

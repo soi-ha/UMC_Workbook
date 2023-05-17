@@ -18,7 +18,6 @@ export default function KakaoLogin() {
 			.then((data) => {
 				if (data.access_token) {
 					localStorage.setItem('token', data.access_token);
-					navigate('/successlogin');
 				} else {
 					navigate('/faillogin');
 				}
@@ -29,5 +28,4 @@ export default function KakaoLogin() {
 		if (!location.search) return;
 		getKakaoToken();
 	}, []);
-	return <h1>Success Login</h1>;
 }
