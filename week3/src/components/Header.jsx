@@ -3,7 +3,10 @@ export default function Header({ color, onChange }) {
 	return (
 		<section className="header">
 			<div className="customer">
-				<span className="cus-content sign-up">회원가입</span>
+				{/* <span className="cus-content sign-up">회원가입</span> */}
+				<Link className="cus-content sign-up" style={{ textDecoration: 'none' }} to={'/signup'}>
+					회원가입
+				</Link>
 				{/* <span className="cus-content sign-in">로그인</span> */}
 				<Link className="cus-content sign-in" style={{ textDecoration: 'none' }} to={'/login'}>
 					로그인
