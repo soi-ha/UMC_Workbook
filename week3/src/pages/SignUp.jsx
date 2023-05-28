@@ -4,11 +4,17 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
 
+const Warning = styled.span`
+	font-size: 14px;
+	color: #e11919;
+	margin-bottom: 20px;
+`;
+
 const Form = styled.form`
 	display: flex;
 	position: relative;
 	flex-direction: column;
-	top: 200px;
+	top: 140px;
 	width: 300px;
 	margin: 0 auto;
 `;
@@ -49,7 +55,7 @@ export default function SignUp() {
 					},
 				})}
 			/>
-			{errors.email && <small role="alert">{errors.email.message}</small>}
+			{errors.email && <Warning role="alert">{errors.email.message}</Warning>}
 
 			<TextField
 				className="field"
@@ -68,7 +74,7 @@ export default function SignUp() {
 					},
 				})}
 			/>
-			{errors.password && <small role="alert">{errors.password.message}</small>}
+			{errors.password && <Warning role="alert">{errors.password.message}</Warning>}
 
 			<TextField
 				className="field"
@@ -89,9 +95,9 @@ export default function SignUp() {
 					},
 				})}
 			/>
-			{errors.phone && <small role="alert">{errors.phone.message}</small>}
+			{errors.phone && <Warning role="alert">{errors.phone.message}</Warning>}
 
-			<Button variant="contained" endIcon={<SendIcon />} disabled={isSubmitting}>
+			<Button type="submit" variant="contained" endIcon={<SendIcon />} disabled={isSubmitting}>
 				회원가입
 			</Button>
 		</Form>
