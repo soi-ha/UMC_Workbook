@@ -162,7 +162,8 @@ body {
 		margin-top: 10px;
 		.cus-content {
 			padding: 4px;
-			&.sign-in {
+			&.sign-in,
+			&.sign-up {
 				color: #333333;
 			}
 			&::after {
